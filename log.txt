@@ -1,0 +1,32 @@
+2024-01-19 17:02:20 :: Base.Create() :: Error :: An error occurred while saving the entity changes. See the inner exception for details. 
+2024-01-19 17:02:20 :: Base.Create() :: Error :: The value of 'ProductImageEntity.ImageId' is unknown when attempting to save changes. This is because the property is also part of a foreign key for which the principal entity in the relationship is not known. 
+2024-01-19 17:39:20 :: Base.Create() :: Error :: An error occurred while saving the entity changes. See the inner exception for details. 
+2024-01-19 17:39:20 :: Base.Create() :: Error :: An error occurred while saving the entity changes. See the inner exception for details. 
+2024-01-19 17:42:56 :: Base.Create() :: Error :: An error occurred while saving the entity changes. See the inner exception for details. 
+2024-01-19 17:42:56 :: Base.Create() :: Error :: An error occurred while saving the entity changes. See the inner exception for details. 
+2024-01-19 18:08:05 :: Base.Create() :: Error :: An error occurred while saving the entity changes. See the inner exception for details. 
+2024-01-19 18:22:46 :: Base.Create() :: Error :: An error occurred while saving the entity changes. See the inner exception for details. 
+2024-01-19 18:22:46 :: Base.Create() :: Error :: An error occurred while saving the entity changes. See the inner exception for details. 
+2024-01-22 13:41:35 :: Base.Create() :: Error :: An error occurred while saving the entity changes. See the inner exception for details. 
+2024-01-22 13:41:51 :: Base.Create() :: Error :: An error occurred while saving the entity changes. See the inner exception for details. 
+2024-01-22 13:41:51 :: Base.Create() :: Error :: Unable to track an entity of type 'ProductImageEntity' because its primary key property 'ArticleNumber' is null. 
+2024-01-22 13:43:16 :: Base.Create() :: Error :: An error occurred while saving the entity changes. See the inner exception for details. 
+2024-01-22 13:43:23 :: Base.Create() :: Error :: An error occurred while saving the entity changes. See the inner exception for details. 
+2024-01-22 13:43:23 :: Base.Create() :: Error :: Unable to track an entity of type 'ProductImageEntity' because its primary key property 'ArticleNumber' is null. 
+2024-01-22 18:14:14 :: Base.Create() :: Error :: Unable to track an entity of type 'ProductImageEntity' because its primary key property 'ArticleNumber' is null. 
+2024-01-22 18:14:52 :: Base.Create() :: Error :: Unable to track an entity of type 'ProductImageEntity' because its primary key property 'ArticleNumber' is null. 
+2024-01-22 20:16:29 :: Base.Create() :: Error :: Unable to track an entity of type 'ProductImageEntity' because its primary key property 'ArticleNumber' is null. 
+2024-01-23 11:25:16 :: Base.Create() :: Error :: Unable to track an entity of type 'CurrencyEntity' because its primary key property 'Code' is null. 
+2024-01-23 11:25:16 :: Base.Create() :: Error :: Unable to modify a row in table 'Currencies' because its key column 'Code' is null. 
+2024-01-23 11:27:03 :: Base.Create() :: Error :: Unable to track an entity of type 'CurrencyEntity' because its primary key property 'Code' is null. 
+2024-01-23 11:27:03 :: Base.Create() :: Error :: Unable to modify a row in table 'Currencies' because its key column 'Code' is null. 
+2024-01-23 11:36:05 :: Base.Create() :: Error :: Unable to track an entity of type 'CurrencyEntity' because its primary key property 'Code' is null. 
+2024-01-23 11:37:16 :: Base.Create() :: Error :: Unable to modify a row in table 'Currencies' because its key column 'Code' is null. 
+2024-01-23 11:46:42 :: Base.Create() :: Error :: An error occurred while saving the entity changes. See the inner exception for details. 
+2024-01-23 11:46:42 :: Base.Create() :: Error :: The value of 'ProductCurrencyEntity.ImageId' is unknown when attempting to save changes. This is because the property is also part of a foreign key for which the principal entity in the relationship is not known. 
+2024-01-23 11:47:01 :: Base.Create() :: Error :: Unable to track an entity of type 'CurrencyEntity' because its primary key property 'Code' is null. 
+2024-01-23 11:47:01 :: Base.Create() :: Error :: The value of 'ProductCurrencyEntity.ImageId' is unknown when attempting to save changes. This is because the property is also part of a foreign key for which the principal entity in the relationship is not known. 
+2024-01-23 11:57:04 :: Base.Create() :: Error :: Unable to track an entity of type 'CurrencyEntity' because its primary key property 'Code' is null. 
+2024-01-23 11:57:04 :: Base.Create() :: Error :: Unable to modify a row in table 'Currencies' because its key column 'Code' is null. 
+2024-01-23 12:58:43 :: Base.Create() :: Error :: An error occurred while saving the entity changes. See the inner exception for details. 
+2024-01-23 12:58:43 :: Base.Create() :: Error :: An error occurred while saving the entity changes. See the inner exception for details. 
