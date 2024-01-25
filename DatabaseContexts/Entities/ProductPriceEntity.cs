@@ -21,11 +21,12 @@ public class ProductPriceEntity
 
     [Required]
     [StringLength(3)]
+    [ForeignKey("CurrencyEntity")]
     public string CurrencyCode { get; set; } = null!;
 
     public virtual ProductEntity ProductEntity { get; set; } = null!;
 
-    public virtual CurrencyEntity CurrencyEntity { get; set; } = null!;
+    public virtual CurrencyEntity Currency { get; set; } = null!;
 
 
 

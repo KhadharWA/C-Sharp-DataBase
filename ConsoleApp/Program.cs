@@ -31,7 +31,7 @@ var app = Host.CreateDefaultBuilder().ConfigureServices(services =>
 
     services.AddDbContext<DataContext>(x => x.UseSqlServer(@"Data Source=LocalHost;Initial Catalog=Product;Integrated Security=True;Encrypt=True;Trust Server Certificate=True"));
 
-    services.AddSingleton<MenuService>();
+     services.AddSingleton<MenuService>();
 
 
 }).Build();
@@ -45,4 +45,4 @@ if (!string.IsNullOrEmpty(articleNumber))
 {
     menuService.AddImageToProductMenu(articleNumber); 
     menuService.AddProductPriceMenu(articleNumber); 
-}
+} 

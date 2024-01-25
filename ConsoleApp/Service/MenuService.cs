@@ -92,8 +92,10 @@ public class MenuService(ProductService productServic)
     {
         Console.Clear();
 
+        Console.WriteLine("Enter Currency Code: ");
+        string code = Console.ReadLine()!;
 
-        Console.WriteLine(" Enter Currency Name: ");
+        Console.WriteLine("Enter Currency Name: ");
         string currencyName = Console.ReadLine()!;
 
 
@@ -108,14 +110,13 @@ public class MenuService(ProductService productServic)
             Console.WriteLine("Invalid input for discount price.");
         }
 
-        Console.WriteLine(" Enter CurrencyCode: ");
-        string currencyCode = Console.ReadLine()!;
+        
 
 
         try
         {
             
-            var result = _productService.AddProductPrice(articleNumber, currencyCode,currencyName, price, discountPrice);
+            var result = _productService.AddProductPrice(articleNumber, code ,currencyName, price, discountPrice);
             if (result != null)
             {
                 Console.WriteLine($"Product price added for article number: {articleNumber}");

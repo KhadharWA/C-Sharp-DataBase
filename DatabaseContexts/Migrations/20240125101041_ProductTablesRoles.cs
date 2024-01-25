@@ -5,7 +5,7 @@
 namespace Shared.Migrations
 {
     /// <inheritdoc />
-    public partial class TablesRoles : Migration
+    public partial class ProductTablesRoles : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -27,7 +27,7 @@ namespace Shared.Migrations
                 name: "Currencies",
                 columns: table => new
                 {
-                    Code = table.Column<string>(type: "nvarchar(3)", maxLength: 3, nullable: false),
+                    Code = table.Column<string>(type: "char(3)", maxLength: 3, nullable: false),
                     CurrencyName = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false)
                 },
                 constraints: table =>
@@ -121,17 +121,17 @@ namespace Shared.Migrations
                     ArticleNumber = table.Column<string>(type: "nvarchar(225)", nullable: false),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     DiscountPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
-                    CurrencyCode = table.Column<string>(type: "nvarchar(3)", maxLength: 3, nullable: false),
-                    CurrencyEntityCode = table.Column<string>(type: "nvarchar(3)", nullable: true)
+                    CurrencyCode = table.Column<string>(type: "char(3)", maxLength: 3, nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ProductPrices", x => x.ArticleNumber);
                     table.ForeignKey(
-                        name: "FK_ProductPrices_Currencies_CurrencyEntityCode",
-                        column: x => x.CurrencyEntityCode,
+                        name: "FK_ProductPrices_Currencies_CurrencyCode",
+                        column: x => x.CurrencyCode,
                         principalTable: "Currencies",
-                        principalColumn: "Code");
+                        principalColumn: "Code",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_ProductPrices_Products_ArticleNumber",
                         column: x => x.ArticleNumber,
@@ -158,9 +158,9 @@ namespace Shared.Migrations
                 column: "ImageId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProductPrices_CurrencyEntityCode",
+                name: "IX_ProductPrices_CurrencyCode",
                 table: "ProductPrices",
-                column: "CurrencyEntityCode");
+                column: "CurrencyCode");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Products_CategoryId",

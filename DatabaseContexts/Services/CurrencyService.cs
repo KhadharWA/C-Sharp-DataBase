@@ -19,18 +19,11 @@ public class CurrencyService ( ICurrencyRepository currencyRepository, IErrorLog
     {
 
 
-
-
-        
-        var currencyEntity = _currencyRepository.GetOne(c => c.Code == code);
+        var currencyEntity = _currencyRepository.GetOne(c => c.CurrencyName == currencyName);
         if (currencyEntity == null)
         {
-            
-            currencyEntity = new CurrencyEntity
-            {
-                Code = code,
-                CurrencyName = currencyName
-            };
+
+            currencyEntity = new CurrencyEntity { Code = code, CurrencyName = currencyName };
             _currencyRepository.Create(currencyEntity);
         }
 

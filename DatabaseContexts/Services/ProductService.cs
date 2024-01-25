@@ -56,9 +56,9 @@ public class ProductService(IProductRepository productRepository, IProductPriceR
         return _imageService.GetOrCreateProductImage(articleNumber, imageUrl);
     }
 
-    public ProductPriceEntity AddProductPrice(string articleNumber, string currencyCode, string currencyName, decimal price, decimal? discountPrice = null)
+    public ProductPriceEntity AddProductPrice(string articleNumber, string code, string currencyName, decimal price, decimal? discountPrice = null)
     {
-        return _currencyService.GetOrCreateProductCurrency(articleNumber, currencyCode, currencyName, price, discountPrice);
+        return _currencyService.GetOrCreateProductCurrency(articleNumber, code, currencyName, price, discountPrice);
     }
 
 }
