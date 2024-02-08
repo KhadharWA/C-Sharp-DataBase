@@ -1,7 +1,9 @@
 ﻿
 
+using Shared.DTOs;
 using Shared.Entities;
 using Shared.Interfaces;
+using Shared.Repositories;
 using Shared.Utils;
 using System.Diagnostics;
 using System.Linq.Expressions;
@@ -33,6 +35,20 @@ public class ManufacturesService(IManufacturesRepository manufacturesRepository,
             return null!;
         }
     }
+
+
+    public ManufacturerDTO GetManufacturerById(int id)
+    {
+        var manufacturer = _manufacturesRepository.GetOne(x => x.Id == id);
+        if (manufacturer == null) return null!;
+
+        return new ManufacturerDTO
+        {
+            Id = manufacturer.Id,
+            ManufacturerName = manufacturer.ManufacturerName
+        };
+    }
+
 
     public bool UpdateManufacturer(ManufacturesEntity manufacturer)
     {

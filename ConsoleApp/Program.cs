@@ -39,10 +39,5 @@ var app = Host.CreateDefaultBuilder().ConfigureServices(services =>
 app.Start();
 
 var menuService = app.Services.GetRequiredService<MenuService>();
-string articleNumber = menuService.CreateProductMenu();
-
-if (!string.IsNullOrEmpty(articleNumber))
-{
-    menuService.AddImageToProductMenu(articleNumber); 
-    menuService.AddProductPriceMenu(articleNumber); 
-} 
+menuService.ShowMainMenu();
+Console.ReadKey();
